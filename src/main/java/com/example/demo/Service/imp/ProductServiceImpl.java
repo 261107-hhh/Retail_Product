@@ -132,9 +132,9 @@ public class ProductServiceImpl implements ProductService{
 		
 		
 		
-//		List<Product> product = this.productRepository.findByProductNameContaining(pname);
+		List<Product> product = this.productRepository.findByProductNameContaining(pname);
 
-		List<Product> product = this.productRepository.findByProductsNameLike(pname);
+//		List<Product> product = this.productRepository.findByProductsNameLike(pname);
 		
 		
 		List<ProductDto> productdto= product.stream().map((each)->this.mapper.map(each,ProductDto.class)).collect(Collectors.toList());
